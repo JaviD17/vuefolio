@@ -12,7 +12,7 @@
       <div class="card glass w-96 bg-base-100 shadow-xl mx-auto my-8">
         <figure class="px-10 pt-10">
           <img
-            src="/images/Arrive.png"
+            src="@/assets/images/Arrive.png"
             alt="Shoes"
             class="rounded-xl"
           />
