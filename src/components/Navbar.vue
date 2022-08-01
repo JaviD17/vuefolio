@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <div class="dropdown">
+      <div class="dropdown" @click="drawer = !drawer">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,30 +19,23 @@
           </svg>
         </label>
         <ul
+          v-if="drawer"
           tabindex="0"
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <div class="divider"></div>
           <li><RouterLink to="/">Home</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/about">About</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/skills">Skills</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/education">Education</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/work">Work</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/portfolio">Portfolio</RouterLink></li>
-          <div class="divider"></div>
 
           <li><RouterLink to="/contact">Contact</RouterLink></li>
-          <div class="divider"></div>
         </ul>
       </div>
       <RouterLink
@@ -94,6 +87,9 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
+import { ref } from "vue";
+
+const drawer = ref(false);
 </script>
 
 <style></style>
